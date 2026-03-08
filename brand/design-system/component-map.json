@@ -1,0 +1,387 @@
+{
+  "_meta": {
+    "brand": "Neometer",
+    "version": "1.0",
+    "description": "Mapa estrutural de blocos reutilizáveis. Auxilia agentes de implementação a montar páginas automaticamente, definindo quais sub-componentes compõem cada bloco e em que ordem."
+  },
+
+  "blocks": {
+
+    "navbar": {
+      "description": "Navegação global persistente",
+      "mode": "dark",
+      "elements": ["logo", "nav_links", "cta_secondary", "cta_primary"],
+      "mobile_elements": ["logo", "hamburger_icon", "cta_primary"],
+      "responsive": {
+        "mobile": "hamburger + 1 CTA",
+        "tablet": "hamburger + 2 CTAs",
+        "desktop": "full nav + 2 CTAs"
+      }
+    },
+
+    "mobile_menu": {
+      "description": "Drawer de navegação mobile",
+      "mode": "dark",
+      "elements": ["logo", "close_button", "nav_links_large", "divider", "cta_secondary_full", "cta_primary_full"],
+      "decorative": ["concentric_arcs"]
+    },
+
+    "hero": {
+      "description": "Seção de impacto máximo — primeira impressão",
+      "mode": "dark",
+      "layout": "split_right",
+      "elements": [
+        "section_label",
+        "headline_display",
+        "subheadline",
+        "checklist_benefits",
+        "cta_group",
+        "hero_image"
+      ],
+      "decorative": ["concentric_arcs_top_right", "concentric_arcs_bottom_left"],
+      "cta_group": ["cta_primary", "cta_ghost"],
+      "hero_image": {
+        "treatment": "overlay_teal",
+        "subject": "professional_portrait OR building_photo",
+        "position": "right_column"
+      }
+    },
+
+    "stats_row": {
+      "description": "Linha de métricas de prova social",
+      "mode": "light",
+      "layout": "horizontal_split",
+      "elements": ["stat_item", "stat_item", "stat_item"],
+      "stat_item": ["numeric_value", "numeric_unit", "stat_label"],
+      "separators": "vertical_thin_teal"
+    },
+
+    "problem_section": {
+      "description": "Apresenta as dores do síndico sem solução",
+      "mode": "dark",
+      "layout": "centered",
+      "elements": [
+        "section_label",
+        "headline_problem",
+        "problem_list",
+        "transition_statement"
+      ],
+      "problem_list": {
+        "icon": "x_mark_red",
+        "items": "list_of_pain_points"
+      }
+    },
+
+    "about_section": {
+      "description": "Apresenta a empresa e sua expertise",
+      "mode": "statement",
+      "layout": "split_right",
+      "elements": [
+        "section_label",
+        "headline",
+        "expertise_highlight",
+        "body_text",
+        "cta_ghost"
+      ],
+      "visual": ["building_photo_graded"]
+    },
+
+    "solution_card_split": {
+      "description": "Card expandido de solução individual — layout split horizontal",
+      "layout": "split",
+      "elements": [
+        "section_label_numbered",
+        "solution_title",
+        "solution_description",
+        "benefit_list",
+        "cta_ghost"
+      ],
+      "visual": {
+        "options": ["smartphone_mockup", "3d_render", "diagram"],
+        "treatment": "overlay_teal OR dark_background"
+      },
+      "variations": {
+        "text_left": "visual à direita — modo light",
+        "text_right": "visual à esquerda — modo dark (alternado)"
+      }
+    },
+
+    "solution_grid": {
+      "description": "Grid de 3 cards de solução compactos",
+      "mode": "dark OR light",
+      "layout": "3_columns",
+      "elements": ["feature_card", "feature_card", "feature_card"],
+      "feature_card": ["icon_teal", "title", "description", "benefit_list_compact"]
+    },
+
+    "ecosystem_section": {
+      "description": "Diagrama do ecossistema integrado de soluções",
+      "mode": "dark",
+      "layout": "centered",
+      "elements": [
+        "section_label",
+        "headline",
+        "ecosystem_diagram",
+        "benefit_list_horizontal"
+      ],
+      "ecosystem_diagram": {
+        "type": "network_diagram",
+        "nodes": ["telemetria", "hub_neometer", "eficiencia_energetica", "reservatorio", "app_dashboard"],
+        "connections": "animated_dashed_teal",
+        "central_node": "hub_neometer"
+      }
+    },
+
+    "dual_audience_section": {
+      "description": "Seção split Síndicos | Moradores",
+      "layout": "split_half",
+      "left_panel": {
+        "mode": "light",
+        "label": "PARA O SÍNDICO",
+        "elements": ["section_label", "headline", "photo_blob_mask", "benefit_list", "cta_primary"]
+      },
+      "right_panel": {
+        "mode": "dark",
+        "label": "PARA O MORADOR",
+        "elements": ["section_label", "headline", "photo_blob_mask", "benefit_list", "cta_secondary"]
+      }
+    },
+
+    "sindico_benefits": {
+      "description": "Benefícios exclusivos para síndicos",
+      "mode": "light",
+      "layout": "split_right",
+      "elements": [
+        "section_label",
+        "headline",
+        "benefit_list",
+        "investimento_zero_highlight",
+        "cta_primary"
+      ],
+      "investimento_zero_highlight": {
+        "type": "callout_card",
+        "headline": "Investimento inicial zero",
+        "description": "Modelo de locação — sem capex",
+        "mode": "dark"
+      }
+    },
+
+    "morador_benefits": {
+      "description": "Benefícios para moradores",
+      "mode": "dark",
+      "layout": "split_left",
+      "elements": [
+        "section_label",
+        "headline",
+        "benefit_list",
+        "app_mockup",
+        "cta_secondary"
+      ]
+    },
+
+    "faq_section": {
+      "description": "Perguntas frequentes em accordion",
+      "mode": "light",
+      "layout": "centered_narrow",
+      "elements": [
+        "section_label",
+        "headline",
+        "faq_accordion"
+      ],
+      "faq_accordion": {
+        "type": "accordion_group",
+        "behavior": "single_open",
+        "items": [
+          { "question": "Precisa fazer obra para instalar?", "answer": "Não. LoRaWAN sem fio..." },
+          { "question": "O condomínio precisa comprar equipamentos?", "answer": "Não. Modelo de locação..." },
+          { "question": "O sistema detecta vazamentos?", "answer": "Sim. Monitoramento contínuo..." },
+          { "question": "Os dados são confiáveis para rateio?", "answer": "Sim. Leituras digitais..." },
+          { "question": "Funciona com aquecimento solar?", "answer": "Sim. Funciona ainda melhor..." },
+          { "question": "Preciso trocar caixas d'água?", "answer": "Não. Usa os reservatórios existentes..." }
+        ]
+      }
+    },
+
+    "cta_final": {
+      "description": "Seção final de conversão com ECONOMIZAÍ",
+      "mode": "dark",
+      "layout": "centered",
+      "elements": [
+        "economizai_headline",
+        "subheadline",
+        "body_text",
+        "cta_primary_large",
+        "contact_info_inline"
+      ],
+      "economizai_headline": {
+        "text": "ECONOMIZAÍ",
+        "style": "display_xl_bold_teal",
+        "note": "Tipografia gigante bold uppercase com quebra visual intencional"
+      },
+      "decorative": ["concentric_arcs_top_right_large", "concentric_arcs_bottom_left"]
+    },
+
+    "testimonial_card": {
+      "description": "Depoimento de cliente — prova social",
+      "mode": "dark",
+      "elements": ["quote_marks_decorative", "quote_text", "avatar", "person_name", "person_role"],
+      "layout": "card"
+    },
+
+    "testimonial_grid": {
+      "description": "Grid de 2-3 depoimentos",
+      "mode": "light",
+      "layout": "centered",
+      "elements": [
+        "section_label",
+        "headline",
+        "testimonial_cards_grid"
+      ]
+    },
+
+    "contact_section": {
+      "description": "Seção de contato com formulário",
+      "mode": "light",
+      "layout": "split_half",
+      "left_panel": {
+        "elements": ["section_label", "headline", "contact_info_list", "social_links"]
+      },
+      "right_panel": {
+        "elements": ["contact_form"]
+      },
+      "contact_form": {
+        "fields": ["name_input", "email_input", "phone_input", "condominion_select", "message_textarea"],
+        "submit": "cta_primary"
+      }
+    },
+
+    "footer": {
+      "description": "Rodapé global",
+      "mode": "dark_deep",
+      "layout": "4_columns",
+      "elements": ["logo_column", "solutions_column", "company_column", "contact_column", "bottom_bar"],
+      "logo_column": ["logo", "tagline", "brand_description"],
+      "solutions_column": ["column_title", "telemetria_link", "eficiencia_link", "reservatorio_link"],
+      "company_column": ["column_title", "sobre_link", "blog_link"],
+      "contact_column": ["column_title", "email", "phone", "whatsapp"],
+      "bottom_bar": ["copyright", "social_icons"],
+      "social_icons": ["instagram", "linkedin"]
+    }
+
+  },
+
+  "pages": {
+
+    "homepage": {
+      "description": "Página principal do site",
+      "sequence": [
+        "navbar",
+        "hero",
+        "stats_row",
+        "problem_section",
+        "about_section",
+        "solution_card_split × 3",
+        "ecosystem_section",
+        "dual_audience_section",
+        "faq_section",
+        "cta_final",
+        "footer"
+      ]
+    },
+
+    "landing_sindico": {
+      "description": "Landing page focada em síndicos",
+      "sequence": [
+        "navbar",
+        "hero",
+        "stats_row",
+        "problem_section",
+        "solution_grid",
+        "sindico_benefits",
+        "testimonial_grid",
+        "faq_section",
+        "contact_section",
+        "footer"
+      ]
+    },
+
+    "landing_morador": {
+      "description": "Landing page focada em moradores",
+      "sequence": [
+        "navbar",
+        "hero",
+        "solution_grid",
+        "morador_benefits",
+        "cta_final",
+        "footer"
+      ]
+    },
+
+    "contact_page": {
+      "description": "Página de contato dedicada",
+      "sequence": [
+        "navbar",
+        "hero",
+        "contact_section",
+        "footer"
+      ]
+    }
+
+  },
+
+  "atomic_elements": {
+
+    "section_label": {
+      "content": ["bullet_or_icon", "text_uppercase"],
+      "style": "pill_teal_dim"
+    },
+
+    "cta_primary": {
+      "content": ["button_text", "arrow_icon"],
+      "style": "pill_teal_solid"
+    },
+
+    "cta_secondary": {
+      "content": ["button_text"],
+      "style": "pill_outline"
+    },
+
+    "cta_ghost": {
+      "content": ["link_text", "arrow_icon"],
+      "style": "text_teal_underline"
+    },
+
+    "benefit_list_item": {
+      "content": ["check_icon_teal", "text"],
+      "style": "inline_flex"
+    },
+
+    "stat_item": {
+      "content": ["numeric_value", "unit", "label_uppercase"],
+      "style": "numeric_display"
+    },
+
+    "feature_card": {
+      "content": ["icon_large", "title", "description"],
+      "style": "card_dark_or_light"
+    },
+
+    "concentric_arcs": {
+      "content": "svg_decorative",
+      "style": "absolute_positioned_overflow_hidden",
+      "interactive": false
+    },
+
+    "blob_mask": {
+      "content": "svg_clip_path_organic",
+      "style": "organic_fluid_shape_teal",
+      "interactive": false
+    },
+
+    "logo": {
+      "content": ["icon_signal_waves", "wordmark_neometer", "tagline"],
+      "variations": ["white", "navy", "teal"]
+    }
+
+  }
+}

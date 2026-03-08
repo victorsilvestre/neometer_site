@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "brand": "Neometer",
+    "source": "12 slides da apresentação comercial 'Módulo I — Síndicos' (assets visuais reais)",
+    "visual_assets": "confirmados — todos os tokens abaixo são baseados em observação direta"
+  },
+  "brand_personality": [
+    "tecnológica",
+    "confiável",
+    "eficiente",
+    "moderna",
+    "audaciosa",
+    "empoderada"
+  ],
+  "visual_style": {
+    "style": "tech-premium, dark-first com alternâncias clean/light",
+    "density": "variável — hero espaçoso e dramático; conteúdo denso em 2–3 colunas",
+    "contrast": "altíssimo — branco sobre dark navy, ou navy sobre branco/teal pálido",
+    "signature_element": "arcos circulares concêntricos em teal (modo claro) ou azul-petróleo (modo escuro)"
+  },
+  "colors": {
+    "primary": ["#0D1B35", "#00C8C3"],
+    "secondary": ["#2563A8", "#2D6FA0"],
+    "neutral": ["#FFFFFF", "#E0F7F5"],
+    "accent": ["#00C4BE"],
+    "gradient": {
+      "light_bg": "linear-gradient(135deg, #FFFFFF 0%, #E0F7F5 100%)",
+      "dark_bg": "linear-gradient(135deg, #0D1B35 0%, #0A2A4A 100%)",
+      "statement": "linear-gradient(160deg, #2D6FA0 0%, #36B5A8 100%)"
+    }
+  },
+  "typography": {
+    "headline_style": "sans-serif geométrica thin/extra-light, frequentemente itálico, muito grande",
+    "body_style": "sans-serif regular, line-height generoso, branco ou cinza claro",
+    "label_style": "uppercase small-caps, semi-bold, navy ou branco",
+    "numeric_highlight": "bold, grande, com unidade em tamanho menor ao lado",
+    "font_reference": "Raleway ou similar (geométrica thin/light)"
+  },
+  "graphic_elements": [
+    "arcos circulares concêntricos (elemento-assinatura, presentes em todos os slides)",
+    "blob orgânico teal como máscara de foto",
+    "diagrama de rede IoT (nós e conexões lineares)",
+    "badges numerados com destaque de economia (ex: '50% NAS CONTAS MENSAIS')",
+    "botões-tag arredondados dark semi-transparente",
+    "3D renders de equipamento com luzes néon",
+    "mockup de smartphone com dashboard",
+    "linha vertical fina como separador de seção"
+  ],
+  "image_style": {
+    "type": "fotografia real + 3D render de equipamento + mockup de app",
+    "tone": "frio a neutro — color grading azul-teal dominante",
+    "composition": "lifestyle com blob mask orgânico; condomínio amplo; profissional confiante com overlay teal",
+    "subjects": ["família sorrindo (morador)", "homem de terno confiante (síndico/profissional)", "prédio residencial moderno", "maquinário industrial 3D", "smartphone com dashboard"]
+  },
+  "logo": {
+    "icon": "ondas de sinal concêntricas (tipo wi-fi/rádio) acima do wordmark",
+    "wordmark": "neometer em caixa baixa",
+    "tagline": "Telemetria Inteligente",
+    "usage": "branco sobre azul/teal escuro"
+  },
+  "voice": {
+    "tone": "confiante, direto, empoderador",
+    "formality": "semi-formal — autoridade técnica com linguagem acessível brasileira",
+    "headline_pattern": "benefício-first com twist em itálico",
+    "copy_pattern": "problema implícito → solução direta → número de prova → CTA",
+    "cta_style": "personalizado por audiência ('Para o condomínio' / 'Para o morador')",
+    "hashtag": "#ECONOMIZAÍ",
+    "numeric_proof": ["até 50% de redução nas contas mensais", "economia de mais de R$00.000 por mês", "R$ 15/mês", "menos de R$ 0,50 por dia"]
+  }
+}

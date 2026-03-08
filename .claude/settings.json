@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \":*)",
+      "Bash(powershell -Command \":*)",
+      "Bash(python -c \":*)",
+      "Read(//c/Users/Victor Silvestre/.claude/projects/c--Users-Victor-Silvestre-Desktop-neometer-site/memory/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Victor Silvestre\\Desktop\\neometer_site\\brand",
+      "c:\\Users\\Victor Silvestre\\.claude\\projects\\c--Users-Victor-Silvestre-Desktop-neometer-site"
+    ]
+  }
+}

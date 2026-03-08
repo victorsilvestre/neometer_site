@@ -1,0 +1,305 @@
+{
+  "_meta": {
+    "brand": "Neometer",
+    "version": "1.0",
+    "description": "Design tokens universais — podem ser convertidos para CSS variables, Tailwind config, Style Dictionary ou qualquer token engine",
+    "source": "brand-style.md + brand-style-tokens.json (assets visuais confirmados)"
+  },
+
+  "colors": {
+    "navy": {
+      "deep": { "value": "#071224", "description": "Superfície mais funda — footer, overlays dark" },
+      "base": { "value": "#0D1B35", "description": "Fundo principal dark — institucional mais forte" },
+      "light": { "value": "#0A2A4A", "description": "Cards elevados em modo dark, fundo dark alternativo" },
+      "mid": { "value": "#1A3A6B", "description": "Arcos concêntricos em modo dark (azul-petróleo)" }
+    },
+    "teal": {
+      "base": { "value": "#00C8C3", "description": "Acento principal — títulos, badges, CTAs, ícones" },
+      "cta": { "value": "#00C4BE", "description": "Variante CTA primário ('Para o condomínio')" },
+      "pale": { "value": "#E0F7F5", "description": "Fundo de seções claras — quase branco, tom frio" },
+      "dim": { "value": "rgba(0, 200, 195, 0.12)", "description": "Fundo de tags dark semi-transparentes" },
+      "border": { "value": "rgba(0, 200, 195, 0.30)", "description": "Borda sutil em modo dark" },
+      "glow": { "value": "rgba(0, 200, 195, 0.35)", "description": "Brilho/glow para hover states" }
+    },
+    "blue": {
+      "mid": { "value": "#2563A8", "description": "Azul médio — botão 'Para o morador', suporte em seções claras" },
+      "gradient-start": { "value": "#2D6FA0", "description": "Início do gradiente statement" },
+      "gradient-end": { "value": "#36B5A8", "description": "Fim do gradiente statement (teal-blue)" }
+    },
+    "white": {
+      "base": { "value": "#FFFFFF", "description": "Texto sobre escuro, fundos clean" },
+      "80": { "value": "rgba(255, 255, 255, 0.80)", "description": "Texto secundário sobre fundo dark" },
+      "60": { "value": "rgba(255, 255, 255, 0.60)", "description": "Texto terciário, subtítulos sobre dark" },
+      "40": { "value": "rgba(255, 255, 255, 0.40)", "description": "Separadores, bordas sutis sobre dark" },
+      "20": { "value": "rgba(255, 255, 255, 0.20)", "description": "Backgrounds sutis sobre dark" },
+      "10": { "value": "rgba(255, 255, 255, 0.10)", "description": "Hover states sobre dark" }
+    },
+    "semantic": {
+      "success": { "value": "#00C8C3", "description": "Usa teal como sucesso — alinhado à marca" },
+      "warning": { "value": "#F59E0B", "description": "Âmbar para alertas — único warm color permitido" },
+      "error": { "value": "#EF4444", "description": "Vermelho para erros — usar com moderação" },
+      "info": { "value": "#2563A8", "description": "Azul médio como informação" }
+    }
+  },
+
+  "gradients": {
+    "light-bg": {
+      "value": "linear-gradient(135deg, #FFFFFF 0%, #E0F7F5 100%)",
+      "description": "Fundo de seções claras intermediárias"
+    },
+    "dark-bg": {
+      "value": "linear-gradient(135deg, #0D1B35 0%, #0A2A4A 100%)",
+      "description": "Hero, footer, seções de produto dark"
+    },
+    "statement": {
+      "value": "linear-gradient(160deg, #2D6FA0 0%, #36B5A8 100%)",
+      "description": "Seções de declaração de propósito/valor"
+    },
+    "overlay-teal": {
+      "value": "linear-gradient(to top, rgba(0, 200, 195, 0.60), transparent)",
+      "description": "Overlay sobre fotografias — estilo teal"
+    },
+    "overlay-dark": {
+      "value": "linear-gradient(to top, rgba(13, 27, 53, 0.70), transparent)",
+      "description": "Overlay alternativo sobre fotografias — estilo navy"
+    },
+    "teal-radial": {
+      "value": "radial-gradient(ellipse at 70% 50%, rgba(0, 200, 195, 0.15), transparent 70%)",
+      "description": "Brilho radial teal para seções dark — atmosfera"
+    },
+    "text-teal": {
+      "value": "linear-gradient(135deg, #00C8C3 0%, #36B5A8 100%)",
+      "description": "Gradiente aplicado em texto para títulos especiais"
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "display": {
+        "value": "'Raleway', 'Nunito', 'Montserrat', sans-serif",
+        "description": "Fonte para títulos hero e displays grandes — thin/extra-light italic"
+      },
+      "body": {
+        "value": "'Inter', 'DM Sans', 'Helvetica Neue', sans-serif",
+        "description": "Fonte para corpo de texto, UI elements, labels"
+      }
+    },
+    "fontWeight": {
+      "extralight": { "value": 200, "description": "Títulos hero — máximo impacto visual elegante" },
+      "light": { "value": 300, "description": "Subtítulos hero, headings de seção" },
+      "regular": { "value": 400, "description": "Corpo de texto" },
+      "medium": { "value": 500, "description": "Elementos UI, botões sutis" },
+      "semibold": { "value": 600, "description": "CTAs, labels uppercase, sub-headings" },
+      "bold": { "value": 700, "description": "Dados numéricos de destaque, palavras-chave inline" }
+    },
+    "fontSize": {
+      "display-xl": { "value": "88px", "description": "Hero title máximo (> 1280px)" },
+      "display-lg": { "value": "64px", "description": "Hero title padrão desktop" },
+      "display-md": { "value": "48px", "description": "Hero title tablet / subtítulo declaração" },
+      "display-sm": { "value": "40px", "description": "Hero title mobile / heading-xl" },
+      "heading-xl": { "value": "40px", "description": "Título de seção dark desktop" },
+      "heading-lg": { "value": "32px", "description": "Título de seção light desktop" },
+      "heading-md": { "value": "24px", "description": "Subtítulo de seção, cabeçalho de card" },
+      "heading-sm": { "value": "20px", "description": "Cabeçalho de feature card" },
+      "label-caps": { "value": "12px", "description": "Section labels uppercase" },
+      "body-lg": { "value": "18px", "description": "Corpo hero, parágrafos principais" },
+      "body-md": { "value": "16px", "description": "Corpo geral" },
+      "body-sm": { "value": "14px", "description": "Texto auxiliar, captions" },
+      "body-xs": { "value": "12px", "description": "Microtexto, tooltips" },
+      "numeric-hero": { "value": "64px", "description": "Dados numéricos de destaque hero" },
+      "numeric-lg": { "value": "48px", "description": "Dados numéricos de destaque seção" },
+      "numeric-unit": { "value": "22px", "description": "Unidade ao lado de número (superscript)" }
+    },
+    "lineHeight": {
+      "tight": { "value": 1.0, "description": "Display xl, numeric hero" },
+      "snug": { "value": 1.1, "description": "Display lg, heading xl" },
+      "compact": { "value": 1.2, "description": "Headings, labels" },
+      "normal": { "value": 1.4, "description": "Heading sm, cabeçalhos de card" },
+      "relaxed": { "value": 1.65, "description": "Body sm" },
+      "generous": { "value": 1.7, "description": "Body md" },
+      "spacious": { "value": 1.75, "description": "Body lg" }
+    },
+    "letterSpacing": {
+      "tightest": { "value": "-0.04em", "description": "Display xl" },
+      "tighter": { "value": "-0.03em", "description": "Display lg, numeric hero" },
+      "tight": { "value": "-0.02em", "description": "Display md/sm, heading xl/lg" },
+      "snug": { "value": "-0.01em", "description": "Heading md" },
+      "normal": { "value": "0em", "description": "Body, heading sm" },
+      "wide": { "value": "0.06em", "description": "CTAs, botões" },
+      "wider": { "value": "0.10em", "description": "Section labels uppercase" },
+      "widest": { "value": "0.14em", "description": "Badge labels, caps especiais" }
+    }
+  },
+
+  "spacing": {
+    "1": { "value": "4px" },
+    "2": { "value": "8px" },
+    "3": { "value": "12px" },
+    "4": { "value": "16px" },
+    "5": { "value": "20px" },
+    "6": { "value": "24px" },
+    "7": { "value": "28px" },
+    "8": { "value": "32px" },
+    "10": { "value": "40px" },
+    "12": { "value": "48px" },
+    "14": { "value": "56px" },
+    "16": { "value": "64px" },
+    "20": { "value": "80px" },
+    "24": { "value": "96px" },
+    "28": { "value": "112px" },
+    "32": { "value": "128px" },
+    "40": { "value": "160px" },
+    "section-mobile": { "value": "64px", "description": "Padding vertical de seção no mobile" },
+    "section-tablet": { "value": "80px", "description": "Padding vertical de seção no tablet" },
+    "section-desktop": { "value": "96px", "description": "Padding vertical de seção no desktop" },
+    "hero-mobile": { "value": "80px", "description": "Padding vertical de hero no mobile" },
+    "hero-desktop": { "value": "128px", "description": "Padding vertical de hero no desktop" }
+  },
+
+  "radius": {
+    "none": { "value": "0px" },
+    "sm": { "value": "6px", "description": "Input, card definido" },
+    "md": { "value": "12px", "description": "Card padrão, modal" },
+    "lg": { "value": "20px", "description": "Card hero, painéis grandes" },
+    "xl": { "value": "32px", "description": "Feature highlight, blob aproximado" },
+    "2xl": { "value": "48px", "description": "Blob shape grandes" },
+    "pill": { "value": "9999px", "description": "Badges, tags, botões pill, section labels" },
+    "circle": { "value": "50%", "description": "Avatares, ícone circular" }
+  },
+
+  "shadow": {
+    "sm": {
+      "value": "0 2px 8px rgba(0, 200, 195, 0.08), 0 1px 3px rgba(13, 27, 53, 0.20)",
+      "description": "Cards sutis em modo light"
+    },
+    "md": {
+      "value": "0 4px 20px rgba(0, 200, 195, 0.12), 0 2px 8px rgba(13, 27, 53, 0.25)",
+      "description": "Cards elevados, botões"
+    },
+    "lg": {
+      "value": "0 8px 40px rgba(0, 200, 195, 0.16), 0 4px 16px rgba(13, 27, 53, 0.30)",
+      "description": "Modais, drawers"
+    },
+    "teal-glow": {
+      "value": "0 0 30px rgba(0, 200, 195, 0.35)",
+      "description": "Hover glow em elementos teal"
+    },
+    "teal-glow-strong": {
+      "value": "0 0 50px rgba(0, 200, 195, 0.50)",
+      "description": "Glow forte para CTAs em foco"
+    },
+    "navy-deep": {
+      "value": "0 8px 48px rgba(7, 18, 36, 0.60)",
+      "description": "Overlay modal em dark"
+    },
+    "inset-dark": {
+      "value": "inset 0 1px 0 rgba(255, 255, 255, 0.10)",
+      "description": "Highlight superior em superfícies dark"
+    }
+  },
+
+  "motion": {
+    "duration": {
+      "instant": { "value": "80ms", "description": "Feedback de click, active state" },
+      "fast": { "value": "150ms", "description": "Hover states, focus rings" },
+      "normal": { "value": "250ms", "description": "Transições de componente, dropdowns" },
+      "slow": { "value": "400ms", "description": "Animações de seção, entrada de modal" },
+      "xslow": { "value": "600ms", "description": "Scroll reveal, hero animations" },
+      "ambient": { "value": "30000ms", "description": "Rotação lenta dos arcos concêntricos" }
+    },
+    "easing": {
+      "out": { "value": "cubic-bezier(0.25, 0.46, 0.45, 0.94)", "description": "Entradas — ease-out suave" },
+      "in": { "value": "cubic-bezier(0.55, 0, 1, 0.45)", "description": "Saídas — ease-in rápido" },
+      "inOut": { "value": "cubic-bezier(0.45, 0, 0.55, 1)", "description": "Transições bidirecionais" },
+      "spring": { "value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "description": "Efeito spring para hover/focus" },
+      "linear": { "value": "linear", "description": "Rotação de arcos, animações contínuas" }
+    },
+    "patterns": {
+      "hover-button": { "value": "transform: scale(1.02); box-shadow: shadow-teal-glow", "duration": "fast", "easing": "out" },
+      "hover-card": { "value": "transform: translateY(-4px); box-shadow: shadow-lg", "duration": "normal", "easing": "out" },
+      "scroll-reveal": { "value": "opacity: 0→1; transform: translateY(20px)→0", "duration": "xslow", "easing": "out", "stagger": "50ms" },
+      "badge-enter": { "value": "transform: scale(0.8)→1; opacity: 0→1", "duration": "slow", "easing": "spring" },
+      "arcs-rotate": { "value": "transform: rotate(0deg)→360deg", "duration": "ambient", "easing": "linear", "iteration": "infinite" }
+    }
+  },
+
+  "zIndex": {
+    "base": { "value": 0, "description": "Fundo de seção, backgrounds" },
+    "surface": { "value": 10, "description": "Cards, inputs" },
+    "elevated": { "value": 20, "description": "Cards hover, floating elements" },
+    "floating": { "value": 30, "description": "Dropdowns, tooltips, popovers" },
+    "sticky": { "value": 40, "description": "Navbar sticky" },
+    "overlay": { "value": 50, "description": "Modais, drawers, backdrop" },
+    "toast": { "value": 60, "description": "Toasts, notificações" },
+    "top": { "value": 9999, "description": "Elementos que devem estar sempre acima de tudo" }
+  },
+
+  "breakpoints": {
+    "xs": { "value": "375px", "description": "Mobile pequeno" },
+    "sm": { "value": "640px", "description": "Mobile largo" },
+    "md": { "value": "768px", "description": "Tablet" },
+    "lg": { "value": "1024px", "description": "Desktop pequeno" },
+    "xl": { "value": "1280px", "description": "Desktop padrão" },
+    "2xl": { "value": "1536px", "description": "Desktop grande" }
+  },
+
+  "layout": {
+    "containerMax": { "value": "1280px", "description": "Largura máxima do container principal" },
+    "containerPadding-mobile": { "value": "20px", "description": "Padding lateral em mobile" },
+    "containerPadding-tablet": { "value": "32px", "description": "Padding lateral em tablet" },
+    "containerPadding-desktop": { "value": "48px", "description": "Padding lateral em desktop" },
+    "gridColumns": { "value": 12, "description": "Sistema de grid de 12 colunas" },
+    "gridGap-mobile": { "value": "16px" },
+    "gridGap-tablet": { "value": "24px" },
+    "gridGap-desktop": { "value": "32px" },
+    "navbarHeight": { "value": "72px", "description": "Altura fixa da navbar" }
+  },
+
+  "components": {
+    "button": {
+      "height-sm": { "value": "36px" },
+      "height-md": { "value": "44px" },
+      "height-lg": { "value": "52px" },
+      "padding-x-sm": { "value": "16px" },
+      "padding-x-md": { "value": "24px" },
+      "padding-x-lg": { "value": "32px" },
+      "radius": { "value": "9999px", "description": "Botões são sempre pill" }
+    },
+    "badge": {
+      "padding-x": { "value": "12px" },
+      "padding-y": { "value": "6px" },
+      "radius": { "value": "9999px" },
+      "font-size": { "value": "12px" },
+      "font-weight": { "value": 600 },
+      "letter-spacing": { "value": "0.08em" }
+    },
+    "card": {
+      "padding-sm": { "value": "20px" },
+      "padding-md": { "value": "28px" },
+      "padding-lg": { "value": "40px" },
+      "radius": { "value": "16px" },
+      "gap": { "value": "16px" }
+    },
+    "input": {
+      "height": { "value": "48px" },
+      "padding-x": { "value": "16px" },
+      "radius": { "value": "8px" },
+      "border-width": { "value": "1.5px" }
+    },
+    "navbar": {
+      "height": { "value": "72px" },
+      "backdrop": { "value": "blur(12px)" },
+      "bg-dark": { "value": "rgba(13, 27, 53, 0.90)" },
+      "bg-scroll": { "value": "rgba(13, 27, 53, 0.95)" }
+    },
+    "section-label": {
+      "font-size": { "value": "11px" },
+      "font-weight": { "value": 600 },
+      "letter-spacing": { "value": "0.14em" },
+      "text-transform": { "value": "uppercase" },
+      "padding-x": { "value": "12px" },
+      "padding-y": { "value": "5px" },
+      "radius": { "value": "9999px" }
+    }
+  }
+}
