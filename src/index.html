@@ -1,14 +1,1086 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Bora</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neometer — Telemetria inteligente para condomínios. Monitoramento em tempo real de água, energia e gás. Fique em paz com seus recursos.">
+  <title>Neometer — Telemetria Inteligente para Condomínios</title>
+
+  <!-- Fonts via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              deep:  '#071224',
+              base:  '#0D1B35',
+              light: '#0A2A4A',
+              mid:   '#1A3A6B',
+            },
+            teal: {
+              DEFAULT: '#00C8C3',
+              cta:  '#00C4BE',
+              pale: '#E0F7F5',
+            },
+          },
+          fontFamily: {
+            display: ['Raleway', 'Nunito', 'Montserrat', 'sans-serif'],
+            body:    ['Inter', 'DM Sans', 'Helvetica Neue', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    
-    <script src="./js/main.js"></script>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar" aria-label="Navegação principal">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a href="#" class="nav-logo" aria-label="Neometer — página inicial">
+      <span class="nav-logo-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="3" fill="currentColor"/>
+          <path d="M14 14 m-7 0 a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M14 14 m-11 0 a11 11 0 0 1 22 0" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M14 14 m-14.5 0 a14.5 14.5 0 0 1 29 0" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+      </span>
+      <span>neometer</span>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <ul class="nav-links" role="list">
+      <li><a href="#solucoes">Soluções</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#ecossistema">Ecossistema</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <!-- Desktop CTAs -->
+    <div class="nav-ctas">
+      <a href="#audiencias" class="btn btn-secondary" style="padding: 9px 20px; font-size: 14px;">Para o morador</a>
+      <a href="#cta-final" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px;">Para o condomínio</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+  <!-- Arcos decorativos -->
+  <div class="arcos" style="top: -80px; right: -80px;">
+    <svg width="400" height="400" viewBox="0 0 400 400" fill="none" opacity="0.12">
+      <circle cx="400" cy="0" r="160" stroke="#1A3A6B" stroke-width="1"/>
+      <circle cx="400" cy="0" r="220" stroke="#1A3A6B" stroke-width="1"/>
+      <circle cx="400" cy="0" r="280" stroke="#1A3A6B" stroke-width="1"/>
+    </svg>
+  </div>
+  <ul class="mobile-menu-links" role="list">
+    <li><a href="#solucoes" class="mobile-link">Soluções</a></li>
+    <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+    <li><a href="#ecossistema" class="mobile-link">Ecossistema</a></li>
+    <li><a href="#faq" class="mobile-link">FAQ</a></li>
+  </ul>
+  <div class="mobile-menu-ctas">
+    <a href="#audiencias" class="btn btn-secondary mobile-link" style="text-align:center; justify-content:center;">Para o morador</a>
+    <a href="#cta-final" class="btn btn-primary mobile-link" style="text-align:center; justify-content:center;">Para o condomínio →</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" class="section section-dark">
+  <!-- Arcos — canto superior direito -->
+  <div class="arcos" style="top: -60px; right: -60px; pointer-events:none; z-index:1;">
+    <svg width="520" height="520" viewBox="0 0 520 520" fill="none" aria-hidden="true" style="animation: arcs-rotate 60s linear infinite; transform-origin: 460px 60px;">
+      <circle cx="460" cy="60" r="120" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.55"/>
+      <circle cx="460" cy="60" r="190" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.45"/>
+      <circle cx="460" cy="60" r="260" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.35"/>
+      <circle cx="460" cy="60" r="340" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.25"/>
+      <circle cx="460" cy="60" r="420" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.15"/>
+    </svg>
+  </div>
+
+  <!-- Arcos — canto inferior esquerdo -->
+  <div class="arcos" style="bottom: -80px; left: -80px; pointer-events:none; z-index:1;">
+    <svg width="340" height="340" viewBox="0 0 340 340" fill="none" aria-hidden="true">
+      <circle cx="-40" cy="380" r="160" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.30"/>
+      <circle cx="-40" cy="380" r="240" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.20"/>
+    </svg>
+  </div>
+
+  <!-- Radial teal glow -->
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse at 70% 50%, rgba(0,200,195,0.08), transparent 70%);"></div>
+
+  <div class="container" style="z-index:2; position:relative;">
+    <div class="hero-grid">
+      <!-- Left: Content -->
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div class="reveal">
+          <span class="section-label">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+            Telemetria Inteligente
+          </span>
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          Fique em paz com <br>
+          <span class="text-teal-grad">a água,</span> energia<br>
+          e gás.
+        </h1>
+
+        <p class="hero-subtitle reveal reveal-delay-2">
+          Com a tecnologia da Neometer, seu condomínio passa a monitorar em tempo real o consumo de recursos, reduz desperdícios e transforma informação em economia.
+        </p>
+
+        <ul class="hero-checklist reveal reveal-delay-3" role="list">
+          <li class="hero-check-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Monitoramento inteligente
+          </li>
+          <li class="hero-check-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Redução comprovada de custos
+          </li>
+          <li class="hero-check-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Gestão moderna para síndicos
+          </li>
+          <li class="hero-check-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Transparência para moradores
+          </li>
+        </ul>
+
+        <div class="reveal reveal-delay-4" style="display:flex; flex-wrap:wrap; gap:12px; margin-top:4px;">
+          <a href="#cta-final" class="btn btn-primary btn-lg">
+            Quero conhecer a solução
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#solucoes" class="btn btn-secondary btn-lg">Saiba mais</a>
+        </div>
+
+        <p class="reveal reveal-delay-5" style="font-size:13px; color:rgba(255,255,255,0.40); margin-top:-8px;">
+          Tecnologia aplicada ao dia a dia do condomínio.
+        </p>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="reveal reveal-delay-2">
+        <div class="hero-image-wrap">
+          <img src="./assets/images/slide-04.jpg" alt="Plataforma de monitoramento Neometer — dashboard de consumo" loading="eager">
+          <div class="hero-image-overlay"></div>
+          <!-- Floating stat badge -->
+          <div style="position:absolute; bottom:28px; left:24px; background:rgba(13,27,53,0.90); border:1px solid rgba(0,200,195,0.30); border-radius:14px; padding:14px 20px; backdrop-filter:blur(8px);">
+            <div style="font-size:28px; font-weight:700; color:#00C8C3; line-height:1; font-family:'Raleway',sans-serif; letter-spacing:-0.02em;">50%</div>
+            <div style="font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.60); margin-top:4px;">redução nas contas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS ROW
+     ============================================================ -->
+<section id="stats" class="section section-light">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-number" style="color: var(--navy-base);">
+          50<span class="unit" style="color: var(--teal);">%</span>
+        </div>
+        <div class="stat-label">Redução nas<br>contas mensais</div>
+        <span class="stat-highlight">comprovado</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-number" style="color: var(--navy-base);">
+          15<span class="unit" style="font-size:18px; vertical-align: middle; font-weight:300;"> anos</span>
+        </div>
+        <div class="stat-label">Experiência em<br>consultoria energética</div>
+        <span class="stat-highlight">de expertise</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-number" style="color: var(--navy-base);">
+          <span class="unit" style="font-size:22px; vertical-align:super; font-weight:400;">R$</span>15<span class="unit" style="color: var(--teal);">/mês</span>
+        </div>
+        <div class="stat-label">Por unidade<br>por mês</div>
+        <span class="stat-highlight">investimento zero</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     O PROBLEMA
+     ============================================================ -->
+<section id="problema" class="section section-dark">
+  <!-- Arcos sutis -->
+  <div class="arcos" style="top:-40px; right:-40px; opacity:0.5; pointer-events:none;">
+    <svg width="300" height="300" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+      <circle cx="300" cy="0" r="120" stroke="#1A3A6B" stroke-width="1" fill="none"/>
+      <circle cx="300" cy="0" r="200" stroke="#1A3A6B" stroke-width="0.8" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="problema-grid">
+      <div>
+        <span class="section-label reveal">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+          Sem Neometer
+        </span>
+
+        <h2 class="heading-xl reveal reveal-delay-1" style="color:#fff; margin-top:20px; margin-bottom:16px;">
+          Sem tecnologia, o síndico<br>
+          <span style="color:rgba(255,255,255,0.50);">administra no escuro.</span>
+        </h2>
+
+        <p class="reveal reveal-delay-2" style="font-size:16px; color:rgba(255,255,255,0.65); max-width:440px; line-height:1.75;">
+          A maioria dos condomínios enfrenta os mesmos desafios. A falta de dados impede decisões inteligentes e gera conflitos entre moradores.
+        </p>
+
+        <ul class="pain-list reveal reveal-delay-3" role="list">
+          <li class="pain-item">
+            <svg class="pain-x" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>
+            Contas altas de água, energia ou gás sem explicação clara
+          </li>
+          <li class="pain-item">
+            <svg class="pain-x" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>
+            Vazamentos ocultos que passam meses sem serem detectados
+          </li>
+          <li class="pain-item">
+            <svg class="pain-x" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>
+            Falta de visibilidade sobre o consumo das unidades
+          </li>
+          <li class="pain-item">
+            <svg class="pain-x" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>
+            Rateios injustos entre moradores
+          </li>
+          <li class="pain-item">
+            <svg class="pain-x" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>
+            Falta de dados para tomada de decisão
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal reveal-delay-2" style="display:flex; align-items:center; justify-content:center;">
+        <div style="position:relative; border-radius:20px; overflow:hidden; width:100%; max-width:420px;">
+          <img src="./assets/images/slide-02.jpg" alt="Condomínio residencial — o problema da falta de dados" style="width:100%; height:400px; object-fit:cover;">
+          <div style="position:absolute;inset:0;background:rgba(13,27,53,0.55);"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(13,27,53,0.90), rgba(13,27,53,0.20) 50%, transparent);"></div>
+          <div style="position:absolute; bottom:24px; left:24px; right:24px;">
+            <p style="font-family:'Raleway',sans-serif; font-weight:200; font-style:italic; font-size:22px; color:#fff; line-height:1.3;">
+              "Com a Neometer, o condomínio passa a operar com <strong style="font-weight:600; color:var(--teal);">dados em tempo real.</strong>"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE A NEOMETER
+     ============================================================ -->
+<section id="sobre" class="section section-statement">
+  <!-- Arcos brancos -->
+  <div class="arcos" style="bottom:-60px; right:-60px; pointer-events:none;">
+    <svg width="380" height="380" viewBox="0 0 380 380" fill="none" aria-hidden="true">
+      <circle cx="380" cy="380" r="150" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
+      <circle cx="380" cy="380" r="230" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none"/>
+      <circle cx="380" cy="380" r="310" stroke="rgba(255,255,255,0.07)" stroke-width="0.8" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="sobre-grid">
+      <div style="display:flex; flex-direction:column; gap:24px;">
+        <span class="section-label section-label-white reveal">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+          Sobre a Neometer
+        </span>
+
+        <h2 class="heading-xl reveal reveal-delay-1" style="color:#fff; font-style:italic; font-weight:200;">
+          Mais de <span style="font-weight:600; font-style:normal;">15 anos</span><br>
+          de experiência em<br>consultoria energética.
+        </h2>
+
+        <p class="reveal reveal-delay-2" style="font-size:17px; color:rgba(255,255,255,0.85); line-height:1.75; max-width:480px;">
+          A Neometer nasceu para levar soluções avançadas de monitoramento e eficiência energética para condomínios residenciais. Nosso time ajudou empresas e indústrias a reduzirem <strong>milhões em custos operacionais</strong>.
+        </p>
+
+        <p class="reveal reveal-delay-3" style="font-size:16px; color:rgba(255,255,255,0.75); line-height:1.75; max-width:480px;">
+          Agora trazemos essa expertise para o ambiente condominial. Nosso propósito é dar ao síndico <strong>controle total</strong> sobre os recursos do prédio e permitir que moradores acompanhem seu próprio consumo com transparência.
+        </p>
+
+        <div class="reveal reveal-delay-4" style="margin-top:8px;">
+          <a href="#solucoes" class="btn btn-primary">
+            Conhecer as soluções
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="sobre-image-wrap">
+          <img src="./assets/images/slide-03.jpg" alt="Síndico profissional com tecnologia Neometer — controle total">
+          <div class="sobre-image-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NOSSAS SOLUÇÕES
+     ============================================================ -->
+<section id="solucoes" aria-label="Nossas Soluções">
+
+  <!-- SOLUÇÃO 1 — Telemetria Inteligente (Light) -->
+  <div class="solucao-block solucao-block-light">
+    <!-- Arcos teal em modo light -->
+    <div class="arcos" style="top:-40px; left:-40px; pointer-events:none;">
+      <svg width="320" height="320" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+        <circle cx="0" cy="0" r="140" stroke="rgba(0,200,195,0.15)" stroke-width="1" fill="none"/>
+        <circle cx="0" cy="0" r="210" stroke="rgba(0,200,195,0.10)" stroke-width="0.8" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="solucao-grid">
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <span class="section-label section-label-light reveal">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+          Solução 01
+        </span>
+
+        <h2 class="heading-lg reveal reveal-delay-1" style="color:var(--navy-base);">
+          Telemetria<br><span style="color:var(--teal);">Inteligente</span>
+        </h2>
+
+        <p class="reveal reveal-delay-2" style="font-size:16px; color:rgba(13,27,53,0.70); line-height:1.75;">
+          Monitoramento em tempo real de água, energia e gás. Instalamos sensores inteligentes nos medidores existentes do prédio que captam dados de consumo e enviam para nossa plataforma digital.
+        </p>
+
+        <ul class="benefit-list reveal reveal-delay-3" role="list" style="color:var(--navy-base);">
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Leitura automática e precisa
+          </li>
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Monitoramento hora a hora
+          </li>
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Gráficos e histórico de consumo
+          </li>
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Eliminação de erros humanos de leitura
+          </li>
+        </ul>
+
+        <div class="reveal reveal-delay-4">
+          <a href="#cta-final" class="btn btn-primary">
+            Quero essa solução
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="solucao-image-wrap">
+          <img src="./assets/images/slide-05.jpg" alt="Plataforma Neometer — telemetria inteligente, monitoramento em tempo real">
+          <div class="solucao-image-overlay"></div>
+          <!-- Tag em cima da imagem -->
+          <div style="position:absolute; top:20px; left:20px;">
+            <span style="background:rgba(0,200,195,0.90); color:#fff; font-size:11px; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; padding:5px 12px; border-radius:9999px;">LoRaWAN</span>
+          </div>
+        </div>
+        <!-- Mini feature cards abaixo -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+          <div style="background:var(--navy-light); border:1px solid rgba(0,200,195,0.15); border-radius:12px; padding:16px 18px;">
+            <div style="color:var(--teal); margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div style="font-size:13px; font-weight:600; color:#fff;">Sem obras</div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.50); margin-top:2px;">instalação sem fio</div>
+          </div>
+          <div style="background:var(--navy-light); border:1px solid rgba(0,200,195,0.15); border-radius:12px; padding:16px 18px;">
+            <div style="color:var(--teal); margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 3h18v18H3z" rx="2"/><path d="M8 12h4l2-4 2 8 2-4h2"/></svg>
+            </div>
+            <div style="font-size:13px; font-weight:600; color:#fff;">Alertas 24h</div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.50); margin-top:2px;">detecção automática</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLUÇÃO 2 — Eficiência Energética (Dark, invertido) -->
+  <div class="solucao-block solucao-block-dark">
+    <div class="arcos" style="top:-40px; right:-40px; pointer-events:none;">
+      <svg width="300" height="300" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+        <circle cx="300" cy="0" r="130" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.6"/>
+        <circle cx="300" cy="0" r="210" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <div class="solucao-grid" style="direction: rtl;">
+      <div style="direction:ltr; display:flex; flex-direction:column; gap:20px;">
+        <span class="section-label reveal">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+          Solução 02
+        </span>
+
+        <h2 class="heading-lg reveal reveal-delay-1" style="color:#fff;">
+          Eficiência<br><span style="color:var(--teal);">Energética</span>
+        </h2>
+
+        <p class="reveal reveal-delay-2" style="font-size:16px; color:rgba(255,255,255,0.70); line-height:1.75;">
+          Modernização do sistema de aquecimento do prédio. Substituímos sistemas tradicionais a gás por <strong style="color:#fff;">trocadores de calor elétricos de alta eficiência</strong>.
+        </p>
+
+        <ul class="benefit-list reveal reveal-delay-3" role="list">
+          <li class="benefit-item">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Até <strong>75% mais eficiência</strong> que sistemas a gás
+          </li>
+          <li class="benefit-item">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Maior segurança operacional
+          </li>
+          <li class="benefit-item">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Integração com aquecimento solar
+          </li>
+          <li class="benefit-item">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Integração com energia fotovoltaica
+          </li>
+        </ul>
+
+        <div class="reveal reveal-delay-4">
+          <a href="#cta-final" class="btn btn-primary">
+            Quero essa solução
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1" style="direction:ltr;">
+        <div class="solucao-image-wrap">
+          <img src="./assets/images/slide-06.jpg" alt="Sistema de eficiência energética Neometer — trocadores de calor elétricos">
+          <div class="solucao-image-overlay"></div>
+          <div style="position:absolute; top:20px; left:20px;">
+            <span style="background:rgba(13,27,53,0.85); color:var(--teal); font-size:11px; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; padding:5px 12px; border-radius:9999px; border:1px solid var(--teal-border);">até 75% economia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLUÇÃO 3 — Monitoramento de Reservatórios (Light) -->
+  <div class="solucao-block solucao-block-light">
+    <div class="arcos" style="bottom:-40px; left:-40px; pointer-events:none;">
+      <svg width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true">
+        <circle cx="0" cy="280" r="140" stroke="rgba(0,200,195,0.15)" stroke-width="1" fill="none"/>
+        <circle cx="0" cy="280" r="220" stroke="rgba(0,200,195,0.08)" stroke-width="0.8" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="solucao-grid">
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <span class="section-label section-label-light reveal">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+          Solução 03
+        </span>
+
+        <h2 class="heading-lg reveal reveal-delay-1" style="color:var(--navy-base);">
+          Monitoramento de<br><span style="color:var(--teal);">Reservatórios</span>
+        </h2>
+
+        <p class="reveal reveal-delay-2" style="font-size:16px; color:rgba(13,27,53,0.70); line-height:1.75;">
+          Segurança hídrica para o condomínio. Monitoramos em tempo real os níveis de cisternas e caixas d'água do prédio — nível de água, vazão e funcionamento das bombas.
+        </p>
+
+        <ul class="benefit-list reveal reveal-delay-3" role="list" style="color:var(--navy-base);">
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Prevenção de falta de água
+          </li>
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Detecção de falhas em bombas
+          </li>
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Monitoramento 24h
+          </li>
+          <li class="benefit-item" style="color:var(--navy-base);">
+            <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l5 5L16 6"/></svg>
+            Dados integrados na mesma plataforma
+          </li>
+        </ul>
+
+        <div class="reveal reveal-delay-4">
+          <a href="#cta-final" class="btn btn-primary">
+            Quero essa solução
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="solucao-image-wrap">
+          <img src="./assets/images/slide-07.jpg" alt="Monitoramento de reservatórios Neometer — nível de água e bombas">
+          <div class="solucao-image-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     ECOSSISTEMA NEOMETER
+     ============================================================ -->
+<section id="ecossistema" class="section">
+  <!-- Radial glow -->
+  <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 40%, rgba(0,200,195,0.07), transparent 70%);"></div>
+
+  <!-- Arcos -->
+  <div class="arcos" style="top:-60px; left:-60px; pointer-events:none;">
+    <svg width="380" height="380" viewBox="0 0 380 380" fill="none" aria-hidden="true">
+      <circle cx="0" cy="0" r="150" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.5"/>
+      <circle cx="0" cy="0" r="240" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.35"/>
+      <circle cx="0" cy="0" r="340" stroke="#1A3A6B" stroke-width="0.6" fill="none" opacity="0.20"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+
+      <!-- Left: text + benefits -->
+      <div>
+        <span class="section-label reveal" style="margin-bottom:20px; display:inline-flex;">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+          Ecossistema Neometer
+        </span>
+        <h2 class="heading-xl reveal reveal-delay-1" style="color:#fff; margin-top:20px; margin-bottom:16px;">
+          Gestão completa<br>de recursos
+        </h2>
+        <p class="reveal reveal-delay-2" style="font-size:17px; color:rgba(255,255,255,0.65); line-height:1.75; margin-bottom:40px;">
+          Quando as soluções da Neometer trabalham juntas, o condomínio ganha um ecossistema completo de monitoramento e eficiência.
+        </p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;" class="reveal reveal-delay-3">
+          <div class="eco-benefit">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+            Mais controle
+          </div>
+          <div class="eco-benefit">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+            Mais segurança
+          </div>
+          <div class="eco-benefit">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+            Previsibilidade financeira
+          </div>
+          <div class="eco-benefit">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+            Menos desperdício
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-4" style="margin-top:32px;">
+          <a href="#cta-final" class="btn btn-primary">
+            Conhecer o ecossistema
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: compact IoT diagram -->
+      <div class="reveal reveal-delay-2" style="position:relative;">
+        <!-- Outer ring glow -->
+        <div style="position:absolute;inset:-20px;background:radial-gradient(ellipse at 50% 50%, rgba(0,200,195,0.08), transparent 70%);pointer-events:none;"></div>
+
+        <!-- Diagram grid: 3x3 with hub in center -->
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; position:relative;">
+
+          <!-- Row 1 -->
+          <div class="eco-node">
+            <div class="eco-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2C12 2 5 9.5 5 14a7 7 0 0 0 14 0c0-4.5-7-12-7-12z"/></svg>
+            </div>
+            <span class="eco-node-label">Água</span>
+          </div>
+          <div class="eco-node">
+            <div class="eco-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <span class="eco-node-label">Energia</span>
+          </div>
+          <div class="eco-node">
+            <div class="eco-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0C20 9 12 2 12 2z"/></svg>
+            </div>
+            <span class="eco-node-label">Gás</span>
+          </div>
+
+          <!-- Row 2: Reservatório + Hub + App -->
+          <div class="eco-node">
+            <div class="eco-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M7 6V4M17 6V4"/></svg>
+            </div>
+            <span class="eco-node-label">Reservatório</span>
+          </div>
+          <!-- Central Hub -->
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+            <div class="eco-hub animate-pulse-slow" style="width:80px; height:80px; box-shadow: 0 0 40px rgba(0,200,195,0.45);">
+              <svg width="34" height="34" viewBox="0 0 28 28" fill="none" aria-label="Neometer Hub">
+                <circle cx="14" cy="14" r="3.5" fill="white"/>
+                <path d="M14 14 m-7 0 a7 7 0 0 1 14 0" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path d="M14 14 m-11 0 a11 11 0 0 1 22 0" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+              </svg>
+            </div>
+            <span style="font-size:10px; font-weight:600; letter-spacing:0.10em; text-transform:uppercase; color:var(--teal);">Hub</span>
+          </div>
+          <div class="eco-node">
+            <div class="eco-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+            </div>
+            <span class="eco-node-label">App</span>
+          </div>
+
+          <!-- Row 3: síndico + dashboard node + morador -->
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+            <div class="eco-node-icon" style="border-color:rgba(0,200,195,0.20);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <span class="eco-node-label">Síndico</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+            <div class="eco-node-icon" style="border-color:rgba(0,200,195,0.20);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <span class="eco-node-label">Dashboard</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+            <div class="eco-node-icon" style="border-color:rgba(0,200,195,0.20);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="eco-node-label">Moradores</span>
+          </div>
+        </div>
+
+        <!-- Animated connection lines overlay -->
+        <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" aria-hidden="true" preserveAspectRatio="none">
+          <!-- Horizontal lines through center row -->
+          <line x1="33%" y1="55%" x2="45%" y2="55%" stroke="rgba(0,200,195,0.30)" stroke-width="1" stroke-dasharray="4 4">
+            <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.5s" repeatCount="indefinite"/>
+          </line>
+          <line x1="55%" y1="55%" x2="67%" y2="55%" stroke="rgba(0,200,195,0.30)" stroke-width="1" stroke-dasharray="4 4">
+            <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.5s" repeatCount="indefinite"/>
+          </line>
+          <!-- Vertical line center -->
+          <line x1="50%" y1="35%" x2="50%" y2="48%" stroke="rgba(0,200,195,0.25)" stroke-width="1" stroke-dasharray="4 4">
+            <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.5s" repeatCount="indefinite"/>
+          </line>
+          <line x1="50%" y1="62%" x2="50%" y2="75%" stroke="rgba(0,200,195,0.25)" stroke-width="1" stroke-dasharray="4 4">
+            <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.5s" repeatCount="indefinite"/>
+          </line>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARA O SÍNDICO / PARA O MORADOR (Split)
+     ============================================================ -->
+<section id="audiencias" aria-label="Para síndicos e moradores">
+  <!-- Panel 1: Síndico (Light) -->
+  <div class="audiencia-panel audiencia-panel-light">
+    <!-- Arcos -->
+    <div class="arcos" style="bottom:-40px; right:-40px; pointer-events:none;">
+      <svg width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true">
+        <circle cx="280" cy="280" r="140" stroke="rgba(0,200,195,0.15)" stroke-width="1" fill="none"/>
+        <circle cx="280" cy="280" r="210" stroke="rgba(0,200,195,0.08)" stroke-width="0.8" fill="none"/>
+      </svg>
+    </div>
+
+    <div style="position:relative; z-index:2; max-width:480px;">
+      <span class="section-label section-label-light reveal">Para o Síndico</span>
+
+      <div style="margin:24px 0; border-radius:16px; overflow:hidden;">
+        <img src="./assets/images/slide-10.jpg" alt="Síndico usando plataforma Neometer — gestão baseada em dados" style="width:100%; height:240px; object-fit:cover;">
+      </div>
+
+      <h2 class="heading-lg reveal reveal-delay-1" style="color:var(--navy-base);">
+        Gestão baseada<br>em dados
+      </h2>
+
+      <p class="reveal reveal-delay-2" style="font-size:16px; color:rgba(13,27,53,0.65); line-height:1.75; margin-top:16px; margin-bottom:20px;">
+        A Neometer oferece ao síndico ferramentas para administrar o condomínio de forma mais profissional.
+      </p>
+
+      <ul class="benefit-list reveal reveal-delay-3" role="list" style="color:var(--navy-base);">
+        <li class="benefit-item" style="color:var(--navy-base);">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Visibilidade total do consumo do prédio
+        </li>
+        <li class="benefit-item" style="color:var(--navy-base);">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Dashboards com dados em tempo real
+        </li>
+        <li class="benefit-item" style="color:var(--navy-base);">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Redução comprovada de desperdícios
+        </li>
+        <li class="benefit-item" style="color:var(--navy-base);">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Redução de conflitos entre moradores
+        </li>
+      </ul>
+
+      <div style="margin-top:20px; padding:18px 20px; background:var(--teal-pale); border-radius:12px; border-left:3px solid var(--teal);">
+        <p style="font-size:14px; color:var(--navy-base); font-weight:500;">Investimento inicial <strong>zero</strong>. Modelo de locação — a Neometer investe no equipamento, o condomínio paga apenas pelo serviço.</p>
+      </div>
+
+      <div class="reveal reveal-delay-4" style="margin-top:28px;">
+        <a href="#cta-final" class="btn btn-primary">
+          Para o condomínio →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 2: Morador (Dark) -->
+  <div class="audiencia-panel audiencia-panel-dark">
+    <!-- Arcos -->
+    <div class="arcos" style="top:-40px; left:-40px; pointer-events:none;">
+      <svg width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true">
+        <circle cx="0" cy="0" r="140" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.5"/>
+        <circle cx="0" cy="0" r="220" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.35"/>
+      </svg>
+    </div>
+
+    <div style="position:relative; z-index:2; max-width:480px;">
+      <span class="section-label reveal">Para o Morador</span>
+
+      <div style="margin:24px 0; border-radius:16px; overflow:hidden;">
+        <img src="./assets/images/slide-11.jpg" alt="Morador consultando consumo pelo app Neometer — transparência total" style="width:100%; height:240px; object-fit:cover;">
+      </div>
+
+      <h2 class="heading-lg reveal reveal-delay-1" style="color:#fff;">
+        Transparência total<br>sobre o consumo
+      </h2>
+
+      <p class="reveal reveal-delay-2" style="font-size:16px; color:rgba(255,255,255,0.70); line-height:1.75; margin-top:16px; margin-bottom:20px;">
+        Acompanhe seu próprio consumo de recursos através da plataforma digital — sem surpresas na conta.
+      </p>
+
+      <ul class="benefit-list reveal reveal-delay-3" role="list">
+        <li class="benefit-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Consumo atual e histórico de uso
+        </li>
+        <li class="benefit-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Alertas de consumo anormal
+        </li>
+        <li class="benefit-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Cada unidade paga pelo que consumiu
+        </li>
+        <li class="benefit-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l5 5L16 6"/></svg>
+          Mais consciência e menos desperdício
+        </li>
+      </ul>
+
+      <div style="margin-top:20px; padding:18px 20px; background:rgba(0,200,195,0.08); border-radius:12px; border-left:3px solid var(--teal);">
+        <p style="font-size:14px; color:rgba(255,255,255,0.80); font-weight:500;">"Cada unidade paga <strong style="color:#fff;">exatamente pelo que consumiu.</strong> Sem estimativas. Sem arredondamentos. Sem erros."</p>
+      </div>
+
+      <div class="reveal reveal-delay-4" style="margin-top:28px;">
+        <a href="#cta-final" class="btn btn-outline-teal">
+          Para o morador →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section id="faq" class="section section-light">
+  <!-- Arcos teal -->
+  <div class="arcos" style="top:-40px; right:-40px; pointer-events:none;">
+    <svg width="300" height="300" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+      <circle cx="300" cy="0" r="130" stroke="rgba(0,200,195,0.15)" stroke-width="1" fill="none"/>
+      <circle cx="300" cy="0" r="210" stroke="rgba(0,200,195,0.08)" stroke-width="0.8" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="container" style="text-align:center;">
+    <span class="section-label section-label-light reveal" style="margin:0 auto;">
+      <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+      Perguntas Frequentes
+    </span>
+
+    <h2 class="heading-xl reveal reveal-delay-1" style="color:var(--navy-base); margin-top:20px;">
+      Tire suas dúvidas
+    </h2>
+    <p class="reveal reveal-delay-2" style="font-size:17px; color:rgba(13,27,53,0.60); margin-top:12px;">
+      As perguntas mais comuns sobre a Neometer e como funciona a instalação.
+    </p>
+
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>Precisa fazer obra para instalar?</span>
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            Não. A Neometer utiliza tecnologia LoRaWAN, que funciona sem fio e atravessa paredes e subsolos sem necessidade de cabeamento. A instalação é não-invasiva e pode ser feita sem reformas.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>O condomínio precisa comprar equipamentos?</span>
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            Não. O modelo de negócio da Neometer é baseado na locação da tecnologia. O investimento inicial é feito pela própria empresa, eliminando risco tecnológico e custos inesperados de manutenção para o condomínio.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>O sistema detecta vazamentos?</span>
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            Sim. O monitoramento é contínuo 24 horas por dia e identifica padrões anormais de consumo — consumo contínuo inesperado, vazões acima do padrão, uso em horários incomuns. Alertas automáticos são enviados, permitindo agir rapidamente.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>Os dados são confiáveis para rateio?</span>
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            Sim. As leituras são digitais e eliminam erros humanos, garantindo precisão nas medições. Cada unidade paga exatamente pelo que consumiu — sem estimativas, sem arredondamentos, sem erros de leitura.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>O sistema funciona com aquecimento solar?</span>
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            Sim. A solução funciona ainda melhor quando combinada com aquecimento solar ou geração fotovoltaica. Quando combinada com geração solar, o custo de aquecimento pode cair drasticamente.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>Preciso trocar caixas d'água ou reservatórios?</span>
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            Não. O sistema funciona com os reservatórios já existentes no condomínio. Instalamos sensores nos equipamentos atuais, sem necessidade de substituição.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA FINAL — ECONOMIZAÍ
+     ============================================================ -->
+<section id="cta-final" class="section-deep section" style="padding: 120px 0;">
+  <!-- Arcos proeminentes -->
+  <div class="arcos" style="top:-80px; right:-80px; pointer-events:none;" aria-hidden="true">
+    <svg width="600" height="600" viewBox="0 0 600 600" fill="none">
+      <circle cx="600" cy="0" r="200" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.50"/>
+      <circle cx="600" cy="0" r="300" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.35"/>
+      <circle cx="600" cy="0" r="420" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.22"/>
+      <circle cx="600" cy="0" r="550" stroke="#1A3A6B" stroke-width="0.6" fill="none" opacity="0.12"/>
+    </svg>
+  </div>
+  <div class="arcos" style="bottom:-80px; left:-80px; pointer-events:none;" aria-hidden="true">
+    <svg width="500" height="500" viewBox="0 0 500 500" fill="none">
+      <circle cx="0" cy="500" r="180" stroke="#1A3A6B" stroke-width="1" fill="none" opacity="0.45"/>
+      <circle cx="0" cy="500" r="280" stroke="#1A3A6B" stroke-width="0.8" fill="none" opacity="0.30"/>
+      <circle cx="0" cy="500" r="390" stroke="#1A3A6B" stroke-width="0.6" fill="none" opacity="0.18"/>
+    </svg>
+  </div>
+
+  <!-- Radial glow teal -->
+  <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%, rgba(0,200,195,0.06), transparent 70%);"></div>
+
+  <div class="container" style="text-align:center; position:relative; z-index:2;">
+    <div class="reveal">
+      <h2 class="economizai-title">#ECONOMIZAÍ</h2>
+    </div>
+
+    <h3 class="reveal reveal-delay-1" style="font-family:var(--font-display); font-size:clamp(20px,3vw,32px); font-weight:200; font-style:italic; color:rgba(255,255,255,0.85); margin-bottom:20px; line-height:1.3;">
+      Pronto para reduzir os custos<br>do seu condomínio?
+    </h3>
+
+    <p class="reveal reveal-delay-2" style="font-size:18px; color:rgba(255,255,255,0.60); margin-bottom:48px; line-height:1.75;">
+      Mais controle. Mais transparência. Mais eficiência.<br>
+      A Neometer transforma dados em economia real.
+    </p>
+
+    <div class="reveal reveal-delay-3" style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-bottom:60px;">
+      <a href="mailto:andre@neometer.com.br" class="btn btn-primary btn-lg">
+        Fale com a Neometer
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a href="#solucoes" class="btn btn-secondary btn-lg">Ver soluções</a>
+    </div>
+
+    <div class="cta-final-contact reveal reveal-delay-4">
+      <a href="mailto:andre@neometer.com.br" class="cta-contact-item" style="color:rgba(255,255,255,0.60); transition:color 150ms;" onmouseover="this.style.color='#00C8C3'" onmouseout="this.style.color='rgba(255,255,255,0.60)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16v16H4z" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+        andre@neometer.com.br
+      </a>
+      <span style="color:rgba(255,255,255,0.20);">|</span>
+      <a href="tel:+5561999999999" class="cta-contact-item" style="color:rgba(255,255,255,0.60); transition:color 150ms;" onmouseover="this.style.color='#00C8C3'" onmouseout="this.style.color='rgba(255,255,255,0.60)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.1 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72A12.84 12.84 0 0 0 9.8 6.38a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.66.69A2 2 0 0 1 22 16.92z"/></svg>
+        (61) 99999-9999
+      </a>
+      <span style="color:rgba(255,255,255,0.20);">|</span>
+      <a href="https://instagram.com/neometer" target="_blank" rel="noopener" class="cta-contact-item" style="color:rgba(255,255,255,0.60); transition:color 150ms;" onmouseover="this.style.color='#00C8C3'" onmouseout="this.style.color='rgba(255,255,255,0.60)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @neometer
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="font-size:18px;">
+          <span class="nav-logo-icon">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="3" fill="#00C8C3"/>
+              <path d="M14 14 m-7 0 a7 7 0 0 1 14 0" stroke="#00C8C3" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <path d="M14 14 m-11 0 a11 11 0 0 1 22 0" stroke="#00C8C3" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+          </span>
+          <span style="color:#fff;">neometer</span>
+        </a>
+        <p>Telemetria inteligente para condomínios residenciais. Transformamos dados em economia real.</p>
+        <div style="margin-top:20px;">
+          <span style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--teal); display:block; margin-bottom:6px;">Tagline</span>
+          <span style="font-style:italic; color:rgba(255,255,255,0.40); font-size:14px;">"Fique em paz com a água, energia e gás."</span>
+        </div>
+      </div>
+
+      <!-- Soluções -->
+      <div>
+        <h4 class="footer-col-title">Soluções</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="#solucoes">Telemetria Inteligente</a></li>
+          <li><a href="#solucoes">Eficiência Energética</a></li>
+          <li><a href="#solucoes">Monitoramento de Reservatórios</a></li>
+          <li><a href="#ecossistema">Ecossistema Neometer</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <h4 class="footer-col-title">Empresa</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="#sobre">Sobre a Neometer</a></li>
+          <li><a href="#audiencias">Para Síndicos</a></li>
+          <li><a href="#audiencias">Para Moradores</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato -->
+      <div>
+        <h4 class="footer-col-title">Contato</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="mailto:andre@neometer.com.br">andre@neometer.com.br</a></li>
+          <li><a href="tel:+5561999999999">(61) 99999-9999</a></li>
+          <li><a href="https://instagram.com/neometer" target="_blank" rel="noopener">@neometer</a></li>
+          <li><a href="https://neometer.com.br" target="_blank" rel="noopener">www.neometer.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Neometer. Todos os direitos reservados.</p>
+      <div class="footer-social" aria-label="Redes sociais">
+        <a href="https://instagram.com/neometer" target="_blank" rel="noopener" aria-label="Instagram @neometer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="mailto:andre@neometer.com.br" aria-label="E-mail da Neometer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16v16H4z" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+        </a>
+        <a href="tel:+5561999999999" aria-label="Telefone da Neometer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.1 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72A12.84 12.84 0 0 0 9.8 6.38a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.66.69A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="./js/main.js"></script>
+
 </body>
 </html>

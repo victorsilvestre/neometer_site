@@ -4,7 +4,12 @@
       "Bash(node -e \":*)",
       "Bash(powershell -Command \":*)",
       "Bash(python -c \":*)",
-      "Read(//c/Users/Victor Silvestre/.claude/projects/c--Users-Victor-Silvestre-Desktop-neometer-site/memory/**)"
+      "Read(//c/Users/Victor Silvestre/.claude/projects/c--Users-Victor-Silvestre-Desktop-neometer-site/memory/**)",
+      "Bash(node screenshot.mjs http://localhost:3000/ hero)",
+      "Read(//c/Users/Victor Silvestre/AppData/Local/Temp/**)",
+      "Read(//c/Users/Victor Silvestre/**)",
+      "Read(//c/Users/**)",
+      "Bash(node screenshot.mjs http://localhost:3000/ round2)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Victor Silvestre\\Desktop\\neometer_site\\brand",
