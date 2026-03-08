@@ -866,7 +866,7 @@ a {
 }
 
 .audiencia-panel {
-  padding: 80px 64px;
+  padding: 80px 48px;
   position: relative;
   overflow: hidden;
 }
@@ -874,11 +874,15 @@ a {
 .audiencia-panel-light {
   background: var(--grad-light);
   color: var(--navy-base);
+  padding-left: max(48px, calc(50vw - 592px));
+  padding-right: 48px;
 }
 
 .audiencia-panel-dark {
   background: var(--grad-dark);
   color: #ffffff;
+  padding-right: max(48px, calc(50vw - 592px));
+  padding-left: 48px;
 }
 
 .audiencia-image {
@@ -1256,6 +1260,11 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+
+  .audiencia-panel-light, .audiencia-panel-dark {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 /* ============================================================
@@ -1341,6 +1350,11 @@ a {
 
   .audiencia-panel {
     padding: 60px 20px;
+  }
+
+  .audiencia-panel-light, .audiencia-panel-dark {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* Ecossistema */
