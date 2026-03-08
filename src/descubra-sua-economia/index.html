@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubra quanto seu condomínio pode economizar com a telemetria inteligente da Neometer. Solicite um diagnóstico gratuito.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Diagnóstico Gratuito — Neometer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { deep: '#071224', base: '#0D1B35', light: '#0A2A4A', mid: '#1A3A6B' },
+            teal: { DEFAULT: '#00C8C3', cta: '#00C4BE', pale: '#E0F7F5' },
+          },
+          fontFamily: {
+            display: ['Raleway', 'Nunito', 'Montserrat', 'sans-serif'],
+            body:    ['Inter', 'DM Sans', 'Helvetica Neue', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/lp-economia.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LP HEADER — Logo only
+     ============================================================ -->
+<header class="lp-header">
+  <div class="lp-header-inner">
+    <a href="/" class="nav-logo" aria-label="Neometer — página inicial">
+      <span class="nav-logo-icon">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="3" fill="currentColor"/>
+          <path d="M14 14 m-7 0 a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M14 14 m-11 0 a11 11 0 0 1 22 0" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M14 14 m-14.5 0 a14.5 14.5 0 0 1 29 0" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+      </span>
+      <span>neometer</span>
+    </a>
+    <span class="lp-header-badge">Diagnóstico Gratuito</span>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     1. HERO
+     ============================================================ -->
+<section class="section lp-hero">
+  <div class="noise-overlay"></div>
+
+  <!-- Arcos decorativos (signature element) -->
+  <div class="arcos lp-hero-arcos" aria-hidden="true">
+    <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" width="700" height="700">
+      <circle cx="700" cy="400" r="200" stroke="rgba(0,200,195,0.07)" stroke-width="1.5" fill="none"/>
+      <circle cx="700" cy="400" r="320" stroke="rgba(0,200,195,0.05)" stroke-width="1.5" fill="none"/>
+      <circle cx="700" cy="400" r="440" stroke="rgba(0,200,195,0.03)" stroke-width="1" fill="none"/>
+      <circle cx="700" cy="400" r="560" stroke="rgba(0,200,195,0.02)" stroke-width="1" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="container lp-hero-grid">
+
+    <!-- Coluna de texto -->
+    <div class="lp-hero-content">
+      <span class="section-label">
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+        Descubra sua economia
+      </span>
+
+      <h1 class="lp-hero-title">
+        Seu condomínio pode estar
+        <span class="text-teal">desperdiçando dinheiro</span>
+        com água, gás e energia.
+      </h1>
+
+      <p class="lp-hero-sub">
+        Descubra como a tecnologia da Neometer ajuda condomínios a reduzir custos e monitorar o consumo em tempo real.
+      </p>
+
+      <div class="lp-hero-ctas">
+        <button class="btn btn-primary btn-lg" data-modal-open aria-haspopup="dialog">
+          Solicitar diagnóstico gratuito
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="btn btn-outline-teal" data-modal-open aria-haspopup="dialog">
+          Descobrir quanto meu condomínio pode economizar
+        </button>
+      </div>
+    </div>
+
+    <!-- Coluna de imagem -->
+    <div class="lp-hero-image-wrap">
+      <div class="lp-hero-image-frame">
+        <img
+          src="../assets/images/slide-04.png"
+          alt="Dashboard Neometer — monitoramento de consumo em tempo real"
+          class="lp-hero-img"
+          loading="eager"
+        >
+        <div class="lp-hero-image-overlay" aria-hidden="true"></div>
+      </div>
+
+      <!-- Floating stat -->
+      <div class="lp-hero-stat" aria-label="Redução média de custos">
+        <span class="lp-hero-stat-num">50%</span>
+        <span class="lp-hero-stat-label">redução média de custos</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     2. PROBLEMA
+     ============================================================ -->
+<section class="section lp-problem">
+  <div class="noise-overlay"></div>
+  <div class="container">
+
+    <div class="lp-section-center">
+      <span class="section-label">O Problema</span>
+      <h2 class="lp-section-title">A maioria dos condomínios não tem visibilidade sobre o consumo</h2>
+      <p class="lp-section-sub">Sem monitoramento adequado, é comum acontecer:</p>
+    </div>
+
+    <div class="lp-pain-grid">
+
+      <div class="lp-pain-item">
+        <span class="lp-pain-icon" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 2l8 8M10 2L2 10" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="lp-pain-text">Vazamentos ocultos por semanas ou meses sem detecção</span>
+      </div>
+
+      <div class="lp-pain-item">
+        <span class="lp-pain-icon" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 2l8 8M10 2L2 10" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="lp-pain-text">Consumo fora do padrão sem alertas em tempo real</span>
+      </div>
+
+      <div class="lp-pain-item">
+        <span class="lp-pain-icon" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 2l8 8M10 2L2 10" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="lp-pain-text">Contas inesperadas que surpreendem síndicos e moradores</span>
+      </div>
+
+      <div class="lp-pain-item">
+        <span class="lp-pain-icon" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 2l8 8M10 2L2 10" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="lp-pain-text">Conflitos entre moradores por falta de transparência no rateio</span>
+      </div>
+
+    </div>
+
+    <p class="lp-problem-closing">
+      A Neometer traz dados em tempo real para transformar consumo em gestão.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     3. COMO FUNCIONA
+     ============================================================ -->
+<section class="section lp-how">
+  <div class="noise-overlay"></div>
+  <div class="container">
+
+    <div class="lp-section-center">
+      <span class="section-label section-label-white">Como Funciona</span>
+      <h2 class="lp-section-title">Tecnologia que transforma dados em economia</h2>
+    </div>
+
+    <div class="lp-how-grid">
+
+      <!-- Card 1: Telemetria -->
+      <div class="lp-how-card">
+        <div class="lp-how-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12h4l3-9 4 18 3-9h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="lp-how-card-title">Telemetria Inteligente</h3>
+        <p class="lp-how-card-desc">Monitoramento em tempo real do consumo de água, energia e gás em todo o condomínio.</p>
+      </div>
+
+      <!-- Card 2: Eficiência -->
+      <div class="lp-how-card">
+        <div class="lp-how-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="lp-how-card-title">Eficiência Energética</h3>
+        <p class="lp-how-card-desc">Modernização do sistema de aquecimento para reduzir custos com energia no condomínio.</p>
+      </div>
+
+      <!-- Card 3: Reservatórios -->
+      <div class="lp-how-card">
+        <div class="lp-how-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <ellipse cx="12" cy="6" rx="8" ry="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="lp-how-card-title">Monitoramento de Reservatórios</h3>
+        <p class="lp-how-card-desc">Controle dos níveis de água e funcionamento das bombas do prédio com alertas automáticos.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     4. BENEFÍCIOS
+     ============================================================ -->
+<section class="section lp-benefits">
+  <div class="container">
+
+    <div class="lp-section-center">
+      <span class="section-label section-label-light">Benefícios</span>
+      <h2 class="lp-section-title lp-section-title-dark">Uma solução para todos no condomínio</h2>
+    </div>
+
+    <div class="lp-benefit-grid">
+
+      <!-- Síndico -->
+      <div class="lp-benefit-card lp-benefit-card-sindico">
+        <div class="lp-benefit-card-tag lp-benefit-card-tag-sindico">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+          </svg>
+          Para o Síndico
+        </div>
+        <h3 class="lp-benefit-card-title">Gestão completa e profissional</h3>
+        <ul class="lp-benefit-list" role="list">
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.15)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Visão completa do consumo do prédio
+          </li>
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.15)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Decisões baseadas em dados reais
+          </li>
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.15)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Redução de desperdícios e custos operacionais
+          </li>
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.15)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Gestão mais profissional e transparente
+          </li>
+        </ul>
+      </div>
+
+      <!-- Morador -->
+      <div class="lp-benefit-card lp-benefit-card-morador">
+        <div class="lp-benefit-card-tag lp-benefit-card-tag-morador">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+          Para o Morador
+        </div>
+        <h3 class="lp-benefit-card-title">Transparência e consciência no consumo</h3>
+        <ul class="lp-benefit-list" role="list">
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.20)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Transparência no consumo individual
+          </li>
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.20)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Alertas de vazamentos na unidade
+          </li>
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.20)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Rateio mais justo baseado no consumo real
+          </li>
+          <li class="lp-benefit-item">
+            <svg class="lp-benefit-check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,200,195,0.20)"/>
+              <path d="M6 10l3 3 5-6" stroke="#00C8C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Incentivo ao consumo consciente
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     5. CTA FINAL
+     ============================================================ -->
+<section class="section lp-cta-final">
+  <div class="noise-overlay"></div>
+
+  <!-- Arcos decorativos centralizados -->
+  <div class="arcos lp-cta-arcos" aria-hidden="true">
+    <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" width="600" height="600">
+      <circle cx="300" cy="300" r="150" stroke="rgba(0,200,195,0.06)" stroke-width="1.5" fill="none"/>
+      <circle cx="300" cy="300" r="240" stroke="rgba(0,200,195,0.04)" stroke-width="1" fill="none"/>
+      <circle cx="300" cy="300" r="340" stroke="rgba(0,200,195,0.025)" stroke-width="1" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <h2 class="lp-cta-title">
+      Quer entender como reduzir<br>
+      os custos do seu condomínio?
+    </h2>
+    <p class="lp-cta-sub">Receba um diagnóstico gratuito da Neometer.</p>
+    <button class="btn btn-primary btn-lg" data-modal-open aria-haspopup="dialog">
+      Solicitar diagnóstico
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER — Minimal
+     ============================================================ -->
+<footer class="lp-footer">
+  <div class="container">
+    <p class="lp-footer-text">© 2025 Neometer. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     MODAL — Diagnóstico Gratuito
+     ============================================================ -->
+<div
+  id="modal-diagnostico"
+  class="lp-modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+  aria-hidden="true"
+>
+  <div class="lp-modal">
+
+    <div class="lp-modal-header">
+      <div>
+        <h3 class="lp-modal-title" id="modal-title">Solicitar diagnóstico gratuito</h3>
+        <p class="lp-modal-sub">Nossa equipe retornará em até 24h úteis.</p>
+      </div>
+      <button class="lp-modal-close" id="modal-close" aria-label="Fechar modal">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <form class="lp-form" novalidate>
+
+      <div class="lp-form-field">
+        <label for="form-nome" class="lp-form-label">Nome</label>
+        <input
+          type="text"
+          id="form-nome"
+          name="nome"
+          class="lp-form-input"
+          placeholder="Seu nome completo"
+          autocomplete="name"
+          required
+        >
+      </div>
+
+      <div class="lp-form-field">
+        <label for="form-email" class="lp-form-label">E-mail</label>
+        <input
+          type="email"
+          id="form-email"
+          name="email"
+          class="lp-form-input"
+          placeholder="seu@email.com"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="lp-form-field">
+        <label for="form-telefone" class="lp-form-label">Telefone</label>
+        <input
+          type="tel"
+          id="form-telefone"
+          name="telefone"
+          class="lp-form-input"
+          placeholder="(11) 99999-9999"
+          autocomplete="tel"
+          required
+        >
+      </div>
+
+      <div class="lp-form-field">
+        <label for="form-condominio" class="lp-form-label">Nome do Condomínio</label>
+        <input
+          type="text"
+          id="form-condominio"
+          name="condominio"
+          class="lp-form-input"
+          placeholder="Nome do seu condomínio"
+          required
+        >
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg lp-form-submit">
+        Enviar solicitação
+      </button>
+
+    </form>
+  </div>
+</div>
+
+
+<script src="../js/lp-economia.js"></script>
+</body>
+</html>
